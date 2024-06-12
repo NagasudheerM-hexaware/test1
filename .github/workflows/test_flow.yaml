@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  merge-and-deploy:
+  push:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -12,6 +12,6 @@ jobs:
         
       - name: Merge test to check
         run: |
-          git checkout origin/check
-          git merge origin/test
+          git checkout check
+          git merge test
           git push origin check
