@@ -19,4 +19,5 @@ jobs:
         run: |
           git checkout check
           git merge test
+          git merge --auto
           git push origin check
