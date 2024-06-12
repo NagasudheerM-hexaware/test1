@@ -1,0 +1,21 @@
+name: merge from test1 to test2 
+
+on:
+  push:
+    branches:
+      - test1
+  workflow_dispatch:    
+
+jobs:
+  merge-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Merge to test2
+        run: |
+          git checkout test2  
+          git merge test1
+          git push origin test2
+
