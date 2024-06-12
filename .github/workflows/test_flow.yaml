@@ -1,4 +1,4 @@
-name: merge from test to check
+name: Merge from test to check
 
 on:
   workflow_dispatch:
@@ -9,8 +9,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
-      - name: Merge to check
+        
+      - name: Merge test to check
         run: |
           git checkout check
           git merge test
