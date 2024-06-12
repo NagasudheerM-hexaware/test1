@@ -4,12 +4,13 @@ on:
   workflow_dispatch:
 
 jobs:
-  push:
+  merge-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-        
+        with:
+          fetch-depth: 0  # Fetch all branches and history
       - name: Merge test to check
         run: |
           git checkout check
