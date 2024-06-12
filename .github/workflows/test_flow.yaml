@@ -12,6 +12,6 @@ jobs:
 
       - name: Merge to main
         run: |
-          git checkout test 
-          git merge main
+          git checkout main 
+          git merge test
           git push origin main
