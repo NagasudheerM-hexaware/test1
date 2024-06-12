@@ -1,4 +1,4 @@
-name: merge from test1 to test2 
+name: merge from test to main 
 
 on:
   push:
