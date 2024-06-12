@@ -11,6 +11,10 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0  # Fetch all branches and history
+      - name: Configure git
+        run: |
+          git config --global user.name "NagasudheerM-hexaware"
+          git config --global user.email "nagasudheerm@hexaware.com"
       - name: Merge test to check
         run: |
           git checkout check
