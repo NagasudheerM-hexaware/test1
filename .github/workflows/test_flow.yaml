@@ -3,7 +3,7 @@ name: merge from test1 to test2
 on:
   push:
     branches:
-      - test1
+      - test
   workflow_dispatch:    
 
 jobs:
@@ -13,9 +13,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Merge to test2
+      - name: Merge to main
         run: |
-          git checkout test2  
-          git merge test1
-          git push origin test2
+          git checkout test 
+          git merge main
+          git push origin main
 
